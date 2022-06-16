@@ -1,0 +1,84 @@
+.article {
+  margin: 40px 0px;
+  width: 83%;
+  max-width: 400px;
+  padding: 15px 40px 45px 40px;
+  background-color: white;
+  box-shadow: 0px 4px 8px 0px #00000059;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.article > img {
+  margin-top: 25px;
+}
+.listo {
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--blue-5);
+  margin-top: 30px;
+}
+.texto {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--gray-5);
+  margin-top: 30px;
+}
+.tramite {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: black;
+  margin-top: 24px;
+}
+.boton {
+  width: 73%;
+  margin-top: 36px;
+  max-width: 180px;
+}
+.article > a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .article {
+    width: 54%;
+    max-width: 1000px;
+    margin-top: 7%;
+    border-radius: 12px;
+    padding: 15px 11% 45px;
+  }
+  .tramite {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tramite p {
+    padding: 0 2px;
+  }
+  .boton {
+    width: 52%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .article {
+    padding: 15px 5% 45px;
+  }
+}

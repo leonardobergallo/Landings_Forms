@@ -1,0 +1,29 @@
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 0px;
+  padding-left: 12%;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.numeroTelefono {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.numeroTelefono > p {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--blue-3);
+}
+.numeroTelefono > img {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}

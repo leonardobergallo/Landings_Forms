@@ -1,0 +1,260 @@
+.spinnerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.article {
+  margin: 40px 0px;
+  width: 83%;
+  padding: 13px;
+  padding-bottom: 45px;
+  background-color: white;
+  box-shadow: 0px 4px 8px 0px #00000059;
+}
+.titulo {
+  font-size: 32px;
+  font-style: normal;
+  line-height: 51px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--blue-5);
+}
+.subtitulo {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--gray-5);
+  margin-top: 10px;
+}
+
+.datosTitular {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "tagTitular tagTitular"
+    "nombre apellido"
+    "dni nacimiento"
+    "numContacto numContacto"
+    "telAlternativo telAlternativo"
+    "correo correo";
+  column-gap: 10px;
+  /* Este calculo es porque el gap se 'agrega' al ancho del grid*/
+  width: calc(100% - 10px);
+}
+.datosTitular > p {
+  grid-area: tagTitular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--blue-5);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.nombre {
+  grid-area: nombre;
+}
+.apellido {
+  grid-area: apellido;
+}
+.dni {
+  grid-area: dni;
+}
+.nacimiento {
+  grid-area: nacimiento;
+}
+.numContacto {
+  grid-area: numContacto;
+}
+.telAlternativo {
+  grid-area: telAlternativo;
+}
+.contenedorCorreo {
+  grid-area: correo;
+  display: flex;
+  flex-direction: column;
+}
+.contenedorCorreo p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--red-2);
+  margin-top: 8px;
+}
+.contenedorCorreo input:focus {
+  outline: none;
+}
+.errorCorreo {
+  border: 1px solid var(--red-2);
+  color: var(--red-2);
+}
+
+.datosDomicilio {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "tagDomicilio tagDomicilio tagDomicilio tagDomicilio tagDomicilio tagDomicilio"
+    "calle calle calle calle calle calle"
+    "altura altura piso piso dpto dpto"
+    "localidad localidad localidad provincia provincia provincia"
+    "entreCalles entreCalles entreCalles entreCalles entreCalles entreCalles";
+  column-gap: 10px;
+}
+.datosDomicilio > p {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--blue-5);
+  padding: 40px;
+  padding-bottom: 20px;
+  grid-area: tagDomicilio;
+}
+.calle {
+  grid-area: calle;
+}
+.altura {
+  grid-area: altura;
+}
+.piso {
+  grid-area: piso;
+}
+.dpto {
+  grid-area: dpto;
+}
+.localidad {
+  grid-area: localidad;
+}
+.provincia {
+  grid-area: provincia;
+}
+.entreCalles {
+  grid-area: entreCalles;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.textoBoton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.textoBoton > p {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-top: 40px;
+}
+.boton {
+  width: 70%;
+  max-width: 220px;
+  min-width: 110px;
+  margin-top: 55px;
+  border-radius: 22px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  height: 44px;
+}
+.boton:disabled {
+  border: none;
+  color: var(--gray-3);
+}
+.boton:enabled {
+  background: var(--blue-5);
+  color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .article {
+    padding: 80px 100px 50px 100px;
+    width: 77%;
+  }
+  .titulo {
+    font-size: 44px;
+    line-height: 51px;
+  }
+  .subtitulo {
+    font-size: 27px;
+    line-height: 51px;
+  }
+
+  .datosTitular {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "tagTitular tagTitular tagTitular tagTitular tagTitular tagTitular tagTitular tagTitular tagTitular tagTitular tagTitular tagTitular"
+      "nombre nombre nombre nombre apellido apellido apellido apellido dni dni dni dni"
+      "nacimiento nacimiento nacimiento nacimiento nacimiento numContacto numContacto numContacto numContacto numContacto numContacto numContacto"
+      "telAlternativo telAlternativo telAlternativo telAlternativo telAlternativo correo correo correo correo correo correo correo";
+    column-gap: 2%;
+  }
+  .datosTitular > p {
+    font-size: 21px;
+    line-height: 51px;
+    text-align: left;
+    margin-top: 40px;
+  }
+
+  .datosDomicilio {
+    column-gap: 2%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "tagDomicilio tagDomicilio tagDomicilio tagDomicilio tagDomicilio tagDomicilio tagDomicilio tagDomicilio tagDomicilio tagDomicilio tagDomicilio tagDomicilio"
+      "calle calle calle calle calle calle altura altura piso piso dpto dpto"
+      "entreCalles entreCalles entreCalles entreCalles entreCalles entreCalles localidad localidad localidad provincia provincia provincia";
+  }
+  .datosDomicilio > p {
+    font-size: 18px;
+    line-height: 18px;
+    text-align: left;
+    padding: 55px 0 0 0;
+  }
+
+  .textoBoton {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  .textoBoton > p {
+    width: 50%;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-right: 2%;
+  }
+  .boton {
+    width: 30%;
+  }
+}
